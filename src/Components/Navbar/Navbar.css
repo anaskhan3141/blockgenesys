@@ -1,0 +1,39 @@
+.navbar{
+    display: flex;
+    gap: 10px;
+    margin: 2rem 3rem;
+    align-items: center;
+}
+
+.navbar h1{
+    font-size: 20px;
+}
+
+.navbar img{
+    width: 50px;
+    height: 50px;
+}
+
+@media screen and (max-width: 800px){
+    .navbar{
+        margin: 1rem 0.5rem;
+        gap: 0.25rem;
+    }
+    .navbar h1{
+        font-size: 20px;
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .navbar{
+        margin: 1rem 0.5rem;
+        gap: 0.25rem;
+    }    
+
+    .navbar h1{
+        font-size: 5px;
+        display: none;
+    }
+}

@@ -1,0 +1,140 @@
+
+
+.page-section{
+    margin: 20vw 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.page-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 72%;
+    gap:3vw;
+}
+
+.page-right{
+    width: 50%;
+}
+
+.page-left h1{
+    font-size: 5vw;
+    text-align: left;
+    line-height: 4.5vw;
+    font-weight: 100;
+    width: 15ch;
+}
+
+.page-left p{
+    /* margin:2vw 0; */
+    padding: 2vw 3vw 2vw 0;
+    font-size: 1.5vw;
+    line-height: 2vw;
+    width: 50ch;
+}
+
+.page-right{
+    width: 50%;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+}
+
+.page-image{
+    width: 25vw;
+}
+
+/* @media screen and (max-width: 1080px) {
+    .page-section {
+        margin: 10rem auto;
+        padding: 0 1rem;
+        justify-content: space-evenly;
+        gap: 3rem;
+    }
+
+    .page-left h1 {
+        font-size: 2.5rem; 
+        line-height: 2.5rem; 
+        margin-bottom: 1.5rem;
+    }
+
+    .page-left p {
+        font-size: 1rem; 
+        line-height: 1rem;
+        width: 40ch; 
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+
+    .page-right img{
+        width: 250px;
+        height: 250px;
+    }
+    
+
+}
+@media screen and (max-width: 700px) {
+    .page-section {
+        margin: 5rem 0;
+        justify-content: space-evenly;
+        padding: 0;
+        gap: 0rem;
+    }
+
+    .page-left h1 {
+        font-size: 1.25rem; 
+        line-height: 1.25rem; 
+        text-align: left; 
+        margin-bottom: 1.5rem;
+    }
+
+    .page-left p {
+        font-size: 0.75rem; 
+        line-height: 0.75rem;
+        width: 40ch; 
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+
+    .page-right img{
+        width: 200px;
+        height: 200px;
+    }
+    
+
+}
+
+
+@media screen and (max-width: 500px) {
+    .page-section {
+        margin: 4rem 0;
+        gap: 1rem;
+        justify-content: space-evenly;
+    }
+
+    .page-left h1 {
+        font-size: 1.25rem; 
+        line-height: 1.25rem; 
+        text-align: left; 
+        margin-bottom: 10px;
+    }
+
+    .page-left p {
+        font-size: 8px; 
+        line-height: 0.75rem;
+        width: 50ch; 
+        text-align: left;
+        margin-bottom: 8px;
+    }
+
+    .page-right img{
+        width: 100px;
+        height: 100px;
+    }
+    
+
+} */
+

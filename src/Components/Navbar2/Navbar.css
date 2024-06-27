@@ -1,0 +1,68 @@
+.nav-bar{
+    margin: 0;
+    padding: 2.2vw;
+    /* border: 2px solid red; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow:0 4px 16px rgba(0, 0, 0, 0.2);
+    position: fixed ;
+    top: 0;
+}
+
+.navbar-left{
+    /* border: 1px solid blue; */
+    box-sizing: border-box;
+    gap:5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav-logo{
+    width: 2.7vw;
+    height: 2.7vw;
+}
+
+.logo-name{
+    font-size: 1.5vw;
+    font-weight: 100;
+}
+
+.navbar-right{
+    /* width: 100%; */
+    /* border:2px solid blue; */
+    /* margin: 0 10px 0 10px; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.list{
+    padding-right: 8vw;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap:8vw;
+    font-size: 1.3vw;
+}
+.theme-button{
+    color: black;
+    box-sizing: border-box;
+    padding: 14px 50px 14px 50px ;
+    border-radius: 10px;
+    background-color: #25f2d0;
+    box-shadow: 0 0 10px rgba(37, 242, 208, 0.75); /* Equal glow on all sides */
+    cursor:pointer;
+
+}
+
+.menu-button-div{
+    width: 4vw;
+}
+
+
+

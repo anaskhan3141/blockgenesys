@@ -1,0 +1,111 @@
+.clients-main{
+    margin: 15rem 0rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12rem;
+}
+
+.clients-main h1 {
+    font-size: 60px;
+}
+
+.clients{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+
+.client{
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+
+.client p{
+    font-size: 3rem;
+}
+
+@media screen and (max-width: 999px) {
+    .clients-main {
+        margin: 10rem auto;
+        padding: 0 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .clients-main h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .clients {
+        display: flex;
+        justify-content: space-evenly; 
+        gap: 2rem;
+    }
+
+    .client {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .client p {
+        font-size: 1.5rem;
+    }
+    .client img{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .clients-main {
+        margin: 4rem auto;
+        padding: 0 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .clients-main h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .clients {
+        display: flex;
+        justify-content: space-evenly; 
+        gap: 2rem;
+    }
+
+    .client {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .client p {
+        font-size: 0.9rem;
+    }
+    .client img{
+        width: 60px;
+        height: 60px;
+    }
+}

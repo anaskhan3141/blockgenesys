@@ -1,0 +1,134 @@
+.main{
+    /* border: 1px solid blue ; */
+    display: flex;
+    justify-content: center;
+}
+
+.main-div{
+    margin-top: 10vw;
+    width: 89%;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid red ; */
+    gap: 1rem;
+}
+
+.main-left{
+    width: 65%;
+}
+
+
+
+.main-left h1{
+    font-size: 6vw;
+    /* line-height: 6rem; */
+    margin-bottom: 4.2vw;
+    font-weight: 400;
+}
+
+.main-left p{
+    width: 70%;
+    font-size: 1.7vw;
+    font-weight: 100;
+    
+}
+.main-right{
+    width: 35%;
+    /* border: 1px solid purple; */
+    
+}
+.main-gif{
+  width: 95%;
+  height: auto;
+}
+
+/* @media screen and (max-width: 1080px) {
+    main {
+        margin: 5rem auto;
+        padding: 0 1rem;
+    }
+    .main-div{
+        justify-content: space-around;
+    }
+
+    .main-left h1 {
+        font-size: 3rem; 
+        line-height: 3.5rem;
+        width: 20ch; 
+        margin-bottom: 1rem; 
+    }
+
+    .main-left p {
+        font-size: 1rem; 
+        line-height: 1.5rem;
+        width: 40ch; 
+    }
+
+    .main-right {
+        text-align: center; 
+    }
+
+    .main-right img {
+        width: 250px; 
+        height: 250px;
+    }
+} */
+
+/* @media screen and (max-width: 800px) {
+    .main-div{
+        gap: 0rem;
+    }
+
+    .main-left h1 {
+        font-size: 2rem; 
+        line-height: 2.5rem;
+        width: 20ch; 
+        margin-bottom: 1rem; 
+    }
+
+    .main-left p {
+        font-size: 1rem; 
+        line-height: 1rem;
+        width: 35ch; 
+    }
+
+    .main-right {
+        text-align: center; 
+    }
+
+    .main-right img {
+        width: 175px; 
+        height: 175px;
+    }
+} */
+
+
+/* 
+@media screen and (max-width: 500px) {
+    .main-div{
+        gap: 0rem;
+    }
+
+    .main-left h1 {
+        font-size: 1.5rem; 
+        line-height: 1.5rem; 
+        width: 18ch;
+        margin-bottom: 1rem; 
+    }
+
+    .main-left p {
+        font-size: 8px; 
+        line-height: 0.75rem;
+        width: 45ch; 
+    }
+
+    .main-right {
+        text-align: center; 
+    }
+
+    .main-right img {
+        width: 100px; 
+        height: 100px;
+    }
+} */
+

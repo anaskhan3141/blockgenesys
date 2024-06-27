@@ -1,0 +1,44 @@
+:root{
+    --body_background:#1b1b1b;
+    --body_color:#fbfbfb;
+    /* --body_background: #fff;
+    --body_color:#000; */
+}
+
+[data-theme="dark"]{
+    /* --body_background:#1b1b1b;
+    --body_color:"fbfbfb"; */
+    --body_background: #fff;
+    --body_color:#000;
+}
+
+
+@font-face{
+    font-family: "NeueMachina-Light";
+    src: url("./assets/fonts/NeueMachina-Light.otf") format("otf");
+}
+@font-face{
+    font-family: "NeueMachina-Regular";
+    src: url("./assets/fonts/NeueMachina-Regular.otf") format("otf");
+}
+@font-face{
+    font-family: "NeueMachina-Ultrabold";
+    src: url("./assets/fonts/NeueMachina-Ultrabold.otf") format("otf");
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: var(--body_background);
+    color: var(--body_color);
+    font-family: "NeueMachina-Light";
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+html{
+    background-color: var(--body_background);
+}
+
+
+
