@@ -1,16 +1,18 @@
 :root{
 
-    --body_background: #fff;
-    --body_color:#000;
+   
+    --body_background:#1b1b1b;
+    --body_color:#fbfbfb;
     /* --body_background: #fff;
     --body_color:#000; */
 }
 
-[data-theme="dark"]{
+[data-theme="light"]{
+    --body_background: #fff;
+    --body_color:#000;
     /* --body_background:#1b1b1b;
     --body_color:"fbfbfb"; */
-    --body_background:#1b1b1b;
-    --body_color:#fbfbfb;
+    
     
 }
 
@@ -41,6 +43,17 @@
 html{
     background-color: var(--body_background);
 }
+
+.animated-text {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  .animated-text.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
 
 
