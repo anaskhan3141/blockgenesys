@@ -16,6 +16,7 @@
 .navbar-left{
     z-index: 100;
     background-color: transparent;
+    padding-left: 2vw;
     /* border: 1px solid blue; */
     box-sizing: border-box;
     gap:5%;
@@ -169,5 +170,18 @@ li{
 }
 
 
-
+@media screen and (max-width:1024px) {
+    #nav-logo{    
+        width: 3vw;
+        height: 3vw;
+    }
+    
+    .logo-name{    
+        font-size: 2vw;
+        font-weight: 100;
+    }
+    .menu-button-div{
+        width: 6vw;
+    }
+}
 

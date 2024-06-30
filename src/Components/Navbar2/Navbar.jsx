@@ -17,7 +17,7 @@ export default function Navbar() {
       setTimeout(() => {
         setIsAnimating(false);
         setIsMenuOpen(false);
-      }, 500); // Match this timeout with the duration of the slide-up animation
+      }, 500); 
     } else {
       setIsMenuOpen(true);
     }
