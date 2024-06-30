@@ -1,10 +1,13 @@
 import React from 'react'
+import {useTheme} from '../ThemeProvider'
 import './Footer.css'
 
 export default function Footer() {
+
+    const {theme, toggletheme} = useTheme();
     return (
-        <footer className='footer'>
-            <div className="top-container">
+        <footer className='footer' style={{borderColor: theme=="light" ? "#2b2b2b" : "#e5e7eb" }}>
+            <div className="top-container" style={{borderColor: theme=="light" ? "#2b2b2b" : "#e5e7eb" }}>
 
                 <p id='para'>BlockGenesys is a distributed network of industry-leading security researchers tackling the most complex and mission-critical protocols across web3.</p>
 
@@ -20,7 +23,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className="bottom-container">
-                <p>© 2024 Spearbit</p>
+                <p>© 2024 Blockgensys</p>
 
 
             </div>

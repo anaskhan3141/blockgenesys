@@ -1,8 +1,15 @@
 import React from 'react'
-import Logo from "../../assets/01.svg"
+import whiteImage from "../../assets/01.svg"
+import blackImage from "../../assets/01-black.svg"
+import {useTheme} from '../ThemeProvider'
 import "./Pages.css"
 
-const Page1 = React.forwardRef((props, ref) =>
+
+const Page1 = React.forwardRef((props, ref) =>{
+    
+    const{theme, toggleTheme}  = useTheme()
+    return(
+    
     <section className='page-section'>
         <div className='page-container' data-scroll-to="page1" ref={ref}>
             <div className='page-left' id='page1'>
@@ -18,10 +25,11 @@ const Page1 = React.forwardRef((props, ref) =>
                 </p>
             </div>
             <div className='page-right'>
-                <img src={Logo} alt="" className='page-image' />
+                <img src={theme == 'dark' ? whiteImage : blackImage} alt="" className='page-image' />
             </div>
         </div>
     </section>
-)
+    )
+})
 
 export default Page1;

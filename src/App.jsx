@@ -11,37 +11,38 @@ import Page3 from "./Components/Pages/Page3"
 import OurClients from "./Components/OurClients/OurClients"
 import Footer from "./Components/Footer2/Footer"
 import ScrollProvider from "./Components/ScrollProvider";
+import Projects from "./Components/Projects/Projects";
 
 const App = () => {
 
   const { theme } = useTheme();
 
-    useEffect(() => {
-        document.body.setAttribute('data-theme', theme);
-    }, [theme]);
+  useEffect(() => {
+    document.body.setAttribute('data-theme', theme);
+  }, [theme]);
 
   return (
-      <div className="app">
-        <Navbar />
-        <Main />
-        <Page0 />
+    <div className="app">
+      <Navbar />
+      <Main />
+      <Page0 />
 
-        <ScrollProvider>
-          {(nextComponentRef) => (
-            <div>
-              <OurProcess />
-              <Page1 ref={nextComponentRef} />
-            </div>
-          )}
-        </ScrollProvider>
+      <ScrollProvider>
+        {(nextComponentRef) => (
+          <div>
+            <OurProcess />
+            <Page1 ref={nextComponentRef} />
+          </div>
+        )}
+      </ScrollProvider>
 
-        <Page2 />
-        <Page3 />
-        <OurClients />
-
+      <Page2 />
+      <Page3 />
+      <OurClients />
+      <Projects/>
         <Footer />
 
-      </div>
+    </div>
 
   )
 

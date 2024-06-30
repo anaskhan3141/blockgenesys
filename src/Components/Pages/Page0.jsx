@@ -1,9 +1,13 @@
 import React from 'react'
-import Logo from "../../assets/0.svg"
+import whiteImage from "../../assets/0.svg"
+import blackImage from '../../assets/0-black.svg'
+import {useTheme} from '../ThemeProvider'
 
 import "./Pages.css"
 
 const Page0 = () => {
+
+    const {theme, toggleTheme} = useTheme()
     return (
         <section className='page-section'>
             <div className='page-container'>
@@ -19,7 +23,7 @@ const Page0 = () => {
                     </p>
                 </div>
                 <div className='page-right'>
-                    <img src={Logo} alt="" className='page-image'/>
+                    <img src={theme == "dark" ? whiteImage: blackImage} alt="" className='page-image' />
                 </div>
             </div>
         </section>

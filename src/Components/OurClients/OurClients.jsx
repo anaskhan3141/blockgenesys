@@ -1,29 +1,23 @@
 import React from 'react'
-import DafiProtocol from "../../assets/DafiProtocol.png"
-import VanarChain from "../../assets/VanarChain.png"
-import ApeTerminal from "../../assets/ApeTerminal.png"
+import goldfinch from "../../assets/clients/goldfinch.svg"
+import clients from './clients'
 
 import "./OurClients.css"
 
 const OurClients = () => {
   return (
-    <div className='clients-main'>
-        <h1>Our Clients</h1>
-        <div className='clients'>
-            <div className='client'>
-                <img src={DafiProtocol} alt="" height={200} width={200} />
-                <p>Dafi Protocol</p>
-            </div>
-            <div className='client'>
-                <img src={VanarChain} alt="" height={200} width={200} />
-                <p>Vanar Chain</p>
-            </div>
-            <div className='client'>
-                <img src={ApeTerminal} alt="" height={200} width={200} />
-                <p>Ape Terminal</p>
-            </div>
-        </div>
-    </div>
+    <section className='clients-main'>
+      <h1>Our Clients</h1>
+      <div className="grid-container">
+        {
+          clients.map((element, index) => (
+            <a key={index} className="grid-item" href={element.link} target='blank'>
+              <img src={element.image} alt="" />
+            </a>
+          ))
+        }
+      </div>
+    </section>
   )
 }
 
