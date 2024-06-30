@@ -6,8 +6,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 1.4vw;
-    font-weight: 100;
+    font-size: 1.5vw;
+    font-weight: 300;
 }
 
 .top-container{
@@ -32,6 +32,7 @@
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
+    margin: 0 2vh;
 }
 .nav-items :hover{
     transform: scale(1.1);

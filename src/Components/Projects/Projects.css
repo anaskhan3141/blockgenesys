@@ -11,7 +11,7 @@
 .projects-main h1 {
     font-size: 5vw;
     line-height: 4.5vw;
-    font-weight: 100;
+    font-weight: 300;
     margin: 5vw 0;
 }
 
@@ -86,9 +86,14 @@ a {
     cursor:pointer;
 }
 
-.project-name,
+.project-name{
+    background-color: transparent;
+    font-weight: 300;
+
+}
 .project-date{
     background-color: transparent;
+    font-weight: 100;
 }
 .project-button:hover{
     background-color: #19caad;

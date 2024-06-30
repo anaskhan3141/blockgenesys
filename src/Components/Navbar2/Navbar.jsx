@@ -86,7 +86,6 @@ export default function Navbar() {
           <div className={`menu ${isAnimating ? 'animate-slide-up' : 'animate-slide-down'}`}
           style={{backgroundColor:theme === 'light' ? "#fff" : "#2b2b2b"}}>
 
-            <div className='menu-left'>
               <ul className='menu-list'>
                 <li>Services</li>
                 <li>Portfolio</li>
@@ -94,19 +93,14 @@ export default function Navbar() {
                 <li>Blog</li>
                 <li>Docs</li>
               </ul>
+
+              <div className='menu-theme-button' onClick={toggleTheme}>
+                {theme === 'light' ?
+                  (<>Dark Mode</>) :
+                  (<>Light Mode</>)
+                }
               
             </div>
-            <div className="menu-right" >
-              <div className='theme-button' onClick={toggleTheme}>
-                {theme === 'light' ?
-                  (<>Light Mode</>) :
-                  (<>Dark Mode</>)
-                }
-              </div>
-            </div>
-
-
-
 
           </div>
         )}
