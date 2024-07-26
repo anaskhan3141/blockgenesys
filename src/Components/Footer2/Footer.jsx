@@ -1,5 +1,6 @@
 import React from 'react'
 import { useTheme } from '../ThemeProvider'
+import { Link, animateScroll as scroll } from 'react-scroll';
 import twitterImageLight from '../../assets/twitterLight.svg'
 import twitterImageDark from '../../assets/twitterDark.svg'
 import youtubeImageLight from '../../assets/youtubeDark.svg'
@@ -18,10 +19,13 @@ export default function Footer() {
                 <p id='para'>BlockGenesys is a distributed network of industry-leading security researchers tackling the most complex and mission-critical protocols across web3.</p>
 
                 <ul className='nav-items'>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Portfolio</li>
-                    <li>Blog</li>
+                    <Link to="services" smooth={true} duration={1700} offset={-62} activeClass="active" className='Link'>
+                        <li>Services</li>
+                    </Link>
+
+                    <Link to="portfolio" smooth={true} duration={1700} offset={-62} activeClass="active" className='Link'>
+                        <li>Portfolio</li>
+                    </Link>
                 </ul>
                 <div id='right-para'>
                     <p>For additional information please reach out to us at sales@blockgensys.com or contact us below:</p>
@@ -34,7 +38,7 @@ export default function Footer() {
 
                 <div className="social-icons">
                     <a href="https://www.x.com" target="_blank" rel="noopener noreferrer" aria-label="BlockGenesys YouTube">
-                        <img src={theme === "light" ? twitterImageLight : twitterImageDark} alt=""  className='social-icon' />
+                        <img src={theme === "light" ? twitterImageLight : twitterImageDark} alt="" className='social-icon' />
                     </a>
 
                     <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="BlockGenesys YouTube">

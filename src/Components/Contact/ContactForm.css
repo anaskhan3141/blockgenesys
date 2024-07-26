@@ -1,0 +1,207 @@
+/* ============ Global Styles ============ */
+.contact-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 14vw 0;
+}
+
+.contact-container {
+  padding: 2vw;
+  width: 72vw;
+  border: 1px solid gray;
+  gap: 2vw;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+
+}
+
+#contact-heading {
+  font-size: 2.1vw;
+  font-weight: 400;
+}
+
+.contact-form-subheading {
+  color: #03ceac;
+  font-size: 1.8vw;
+  margin-bottom: 0.8vw;
+  font-weight: 200;
+}
+
+.contact-form-heading-para {
+  font-size: 1vw;
+  margin-bottom: 4vw;
+}
+
+.type-of-service {
+  border-bottom: 1px solid gray;
+  padding: 2.7vw 0;
+}
+
+/* ========= Checkbox List =========== */
+.checkbox-list {
+  display: flex;
+  gap: 15vw;
+  color: white;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1.4vw;
+}
+
+.type-checkbox {
+  margin-right: 1vw;
+  accent-color: #03ceac;
+  width: 2.7vw;
+}
+
+.type-checkbox:checked {
+  background-color: #03ceac;
+  border-color: #03ceac;
+}
+
+.service-info {
+  font-size: 1.1vw;
+  color: #03ceac;
+  width: 100%;
+  padding: 1vw;
+  background-color: #37373b;
+  border-radius: 0.7vw;
+}
+
+.contact-info,
+.project-info {
+  padding: 3vw 0;
+  border-bottom: 1px solid gray;
+}
+
+/* ================================ Contact Form =============================== */
+.contact-form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: auto;
+  color: white;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+label {
+  margin-bottom: 1vw;
+  margin-top: 1vw;
+  font-size: 1.5vw;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  font-size: 1.2vw;
+  padding: 1.2vw;
+  border: 2px solid #ccc;
+  border-radius: 0.5vw;
+  background-color: #333;
+  color: white;
+}
+
+input[name="projectName"],
+textarea {
+  margin: 1vw 0;
+  width: 100%;
+  resize: vertical;
+}
+
+textarea{
+  min-height: 10vw;
+}
+
+input[type="text"].error,
+input[type="email"].error,
+textarea.error {
+  border-color: red;
+}
+
+input.error:focus,
+textarea.error:focus {
+  outline: none;
+  border-color: red;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #00d8d6;
+}
+
+.error-message {
+  color: red;
+  font-size: 1.1vw;
+  margin: 1vw 0;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  background-color: #00d8d6;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00b4b1;
+}
+
+/* ================================ Project Form =============================== */
+.project-form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.submit {
+  padding: 2vw 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.submit-button {
+  font-size: 1.1vw;
+  color: black;
+  box-sizing: border-box;
+  padding: 1vw 3vw;
+  border-radius: 0.7vw;
+  background-color: #25f2d0;
+  box-shadow: 0 0 10px rgba(37, 242, 208, 0.75);
+  cursor: pointer;
+}
+
+
+@media screen and (max-width:1024px) {
+
+  input[type="text"],
+  input[type="email"],
+  textarea {    
+    border: 1px solid #ccc;    
+  }
+
+  .contact-section {
+      padding: 20vw 0;
+  }
+}

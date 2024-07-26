@@ -87,7 +87,6 @@
     border-radius: 10px;
     background-color: #25f2d0;
     box-shadow: 0 0 10px rgba(37, 242, 208, 0.75);
-    /* Equal glow on all sides */
     cursor: pointer;
 
 }
