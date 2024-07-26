@@ -68,6 +68,11 @@ a {
     background-color: rgb(0, 0, 0, 0.2);
     padding: 2vw 2vw;
 }
+.project-logo:hover{
+    
+    background-color: rgb(0, 0, 0, 0.5);
+
+}
 
 .project-logo img {
     background-color: rgb(0, 0, 0, 0);

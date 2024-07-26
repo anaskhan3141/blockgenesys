@@ -19,7 +19,9 @@ const Projects = () => {
                         <div key={index} className="project-item">
 
                             <div className='project-item-left'>
-                                <a key={index} className="project-logo"><img src={item.logo} alt="" srcset="" /></a>
+                                <a key={index} href={item.clientLink} target='blank' className="project-logo">
+                                    <img src={item.logo} alt="" />
+                                </a>
                                 <p className='project-name'>{item.name}</p>
                             </div>
 
@@ -36,9 +38,9 @@ const Projects = () => {
 
                     <a href='https://www.github.com' target='blank'>
                         <div className="view-all-button"
-                        style={{backgroundColor: theme == 'light' ? "#afafaf" : "#2b2b2b"}}>
+                            style={{ backgroundColor: theme == 'light' ? "#afafaf" : "#2b2b2b" }}>
                             View All
-                            <img src={nextIcon} alt="" className='next-icon'/>
+                            <img src={nextIcon} alt="" className='next-icon' />
                         </div>
                     </a>
 

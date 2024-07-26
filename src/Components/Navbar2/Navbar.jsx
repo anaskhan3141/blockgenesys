@@ -60,7 +60,7 @@ export default function Navbar() {
               </Link>
 
               <Link to="portfolio" smooth={true} duration={1700} offset={-62} activeClass="active" className='Link'>
-                <li>Portfolio</li>
+                <li className='active'>Portfolio</li>
               </Link>
 
             </ul>
