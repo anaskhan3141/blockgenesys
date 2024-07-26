@@ -1,4 +1,4 @@
-.nav-bar{
+.nav-bar {
     z-index: 10;
     margin: 0;
     padding: 1.6vw;
@@ -7,40 +7,49 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    box-shadow:0 4px 16px rgba(0, 0, 0, 0.2);
-    position: fixed ;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    position: fixed;
     top: 0;
 }
 
-.navbar-left{
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    width: 72vw;
+}
+
+.navbar-left {
     z-index: 100;
     background-color: transparent;
-    padding-left: 2vw;
+    /* padding-left: 2vw; */
     /* border: 1px solid blue; */
     box-sizing: border-box;
-    gap:5%;
+    gap: 1.2vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-#nav-logo{
+#nav-logo {
     background-color: transparent;
-
+    cursor: pointer;
     width: 2.7vw;
     height: 2.7vw;
 }
 
-.logo-name{
+.logo-name {
     background-color: transparent;
-
+    cursor: pointer;
     font-size: 1.5vw;
     font-weight: 100;
 }
 
-.navbar-right{
+.navbar-right {
     /* width: 100%; */
     /* border:2px solid blue; */
     /* margin: 0 10px 0 10px; */
@@ -49,26 +58,41 @@
     align-items: center;
     justify-content: center;
 }
-.list{
-    padding-right: 8vw;
+
+.list {
+    padding-right: 4vw;
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    gap:8vw;
+    gap: 4vw;
     font-size: 1.3vw;
 }
-.theme-button{
+
+.list li {
+    cursor: pointer;
+}
+
+.list li:hover {
+    border-bottom: 1px solid #ccc;
+}
+
+.Link{
+    background-color: transparent;
+}
+
+.theme-button {
     color: black;
     box-sizing: border-box;
-    padding: 14px 50px 14px 50px ;
+    padding: 14px 50px 14px 50px;
     border-radius: 10px;
     background-color: #25f2d0;
-    box-shadow: 0 0 10px rgba(37, 242, 208, 0.75); /* Equal glow on all sides */
-    cursor:pointer;
+    box-shadow: 0 0 10px rgba(37, 242, 208, 0.75);
+    /* Equal glow on all sides */
+    cursor: pointer;
 
 }
 
-.menu-button-div{
+.menu-button-div {
     z-index: 100;
     display: flex;
     align-items: center;
@@ -78,17 +102,67 @@
 }
 
 
-svg{
-    
+svg {
+
     background-color: transparent;
 }
+
+#dark-mode-button {
+    margin-right: 4vw;
+    position: relative;
+    width: 4vw;
+    height: 1.8vw;
+    appearance: none;
+    border-radius: 1vw;
+    box-shadow: inset 0 2px 2px #5858581a;
+    inset: 0 -2px 2px #5858581a;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+
+#dark-mode-button:checked {
+    background: #818181;
+
+}
+
+#dark-mode-button {
+    background: #2b2b2b;
+    box-shadow: inset 0 2px 2px #5858581a;
+    inset: 0 -2px 2px #5858581a;
+}
+
+#dark-mode-button::before {
+    content: "";
+    position: absolute;
+    width: 1.8vw;
+    height: 1.8vw;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+    transition: 0.5s;
+    box-shadow: inset 0 2px 2px #fff, inset 0 -2px 2px #fff;
+
+}
+
+/* #dark-mode-button input:checked[type="checkbox"]::before */
+#dark-mode-button:checked::before {
+    background: linear-gradient(27deg, #494949, #000);
+    /* background: radial-gradient(to bottom,  #000, #747474); */
+    box-shadow: inset 0 2px 2px #ffffff33, inset 0 -2px 2px #ffffff33;
+    transform: translateX(2.5vw);
+
+}
+
+
 
 
 
 /* -------------------Menu Styling --------------------------------- */
 
 
-.menu{
+.menu {
     z-index: 100;
     position: fixed;
     top: 0;
@@ -98,42 +172,44 @@ svg{
     align-items: center;
     justify-content: center;
     background-color: #2b2b2b;
-    width: 40%;
-    padding: 5vw 0;
+    width: 50vw;
+    padding: 10vw 0;
     border-radius: 2vw;
     margin: 6vw;
-    box-shadow:0 4px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     transform-origin: top right;
 
     /* height: 100vh; */
 }
 
 
-.menu-list{
+.menu-list {
     list-style-type: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:3vw;
-    font-size: 2vw;
+    gap: 4vw;
+    font-size: 3.5vw;
     background-color: transparent;
     margin-bottom: 3vw;
 
 }
-li{
+
+.menu-list li {
     background-color: transparent;
 
 }
 
-.menu-theme-button{
+.menu-contact-button {
     color: black;
-    font-size: 1.8vw;
+    font-size: 3vw;
     box-sizing: border-box;
-    padding: 1.5vw 2vw ;
+    padding: 2vw 3vw;
     border-radius: 1vw;
     background-color: #25f2d0;
-    box-shadow: 0 0 10px rgba(37, 242, 208, 0.75); /* Equal glow on all sides */
-    cursor:pointer;
+    box-shadow: 0 0 10px rgba(37, 242, 208, 0.75);
+    /* Equal glow on all sides */
+    cursor: pointer;
 }
 
 
@@ -145,8 +221,9 @@ li{
 
         /* transform: translateY(-200%); */
     }
+
     to {
-        transform:scale(1);
+        transform: scale(1);
 
         /* transform: translateY(0); */
     }
@@ -156,6 +233,7 @@ li{
     from {
         transform: scale(1);
     }
+
     to {
         transform: scale(0);
     }
@@ -171,17 +249,42 @@ li{
 
 
 @media screen and (max-width:1024px) {
-    #nav-logo{    
+    .nav-bar {
+        width: 100vw;
+        justify-content: space-between;
+    }
+
+    #nav-logo {
         width: 3vw;
         height: 3vw;
     }
-    
-    .logo-name{    
+
+    .logo-name {
         font-size: 2vw;
         font-weight: 100;
     }
-    .menu-button-div{
+
+    .menu-button-div {
+
         width: 6vw;
     }
-}
 
+    #dark-mode-button {
+        width: 7vw;
+        height: 4vw;
+        border-radius: 2vw;
+        margin: 0 0 4vw 0;
+    }
+
+    #dark-mode-button::before {
+        width: 4vw;
+        height: 4vw;
+        border-radius: 50%;
+    }
+
+    #dark-mode-button:checked::before {
+        transform: translateX(3vw);
+
+    }
+
+}

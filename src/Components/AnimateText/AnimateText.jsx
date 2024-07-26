@@ -26,7 +26,7 @@ const AnimatedText = ({ children }) => {
     };
   }, []);
 
-  return <div ref={elementRef} className="animated-text" style={{backgroundColor:"transparent"}}>{children}</div>;
+  return <div ref={elementRef} className="animated-text" style={{backgroundColor:"transparent",background:"transparent"}}>{children}</div>;
 };
 
 export default AnimatedText;

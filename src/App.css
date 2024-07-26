@@ -1,36 +1,37 @@
-:root{
+:root {
 
-   
-    --body_background:#1b1b1b;
-    --body_color:#fbfbfb;
+    --body_background: #1b1b1b;
+    --body_color: #fbfbfb;
     /* --body_background: #fff;
     --body_color:#000; */
 }
 
-[data-theme="light"]{
+[data-theme="light"] {
     --body_background: #fff;
-    --body_color:#000;
+    --body_color: #000;
     /* --body_background:#1b1b1b;
     --body_color:"fbfbfb"; */
-    
-    
+
+
 }
 
 
-@font-face{
+@font-face {
     font-family: "NeueMachina-Light";
     src: url("./assets/fonts/NeueMachina-Light.otf") format("otf");
 }
-@font-face{
+
+@font-face {
     font-family: "NeueMachina-Regular";
     src: url("./assets/fonts/NeueMachina-Regular.otf") format("otf");
 }
-@font-face{
+
+@font-face {
     font-family: "NeueMachina-Ultrabold";
     src: url("./assets/fonts/NeueMachina-Ultrabold.otf") format("otf");
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -40,7 +41,8 @@
     transition: background-color 0.3s ease, color 0.3s ease;
 
 }
-html{
+
+html {
     background-color: var(--body_background);
 }
 
@@ -48,12 +50,9 @@ html{
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 1s ease-out, transform 1s ease-out;
-  }
-  
-  .animated-text.in-view {
+}
+
+.animated-text.in-view {
     opacity: 1;
     transform: translateY(0);
-  }
-
-
-
+}

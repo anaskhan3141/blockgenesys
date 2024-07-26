@@ -119,11 +119,7 @@ const clients = [
         image: zksync,
         link: "https://www.zksync.com"
     },
-    {
-        name: "ZkSync",
-        image: zksync,
-        link: "https://www.zksync.com"
-    },
+    
 ]
 
 export default clients

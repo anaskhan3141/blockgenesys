@@ -1,6 +1,6 @@
 
 
-.page-section{
+.page1-section{
     margin: 20vw 0;
     display: flex;
     justify-content: center;
@@ -8,19 +8,19 @@
     
 }
 
-.page-container{
+.page1-container{
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 72%;
+    width: 72vw;
     gap:3vw;
 }
 
-.page-right{
+.page1-right{
     width: 50%;
 }
 
-.page-left h1{
+.page1-left h1{
     font-size: 5vw;
     line-height: 4.5vw;
     font-weight: 300;
@@ -28,7 +28,7 @@
     width: 15ch;
 }
 
-.page-left p{
+.page1-left p{
     background-color: transparent;
     /* margin:2vw 0; */
     padding: 2vw 3vw 2vw 0;
@@ -38,14 +38,14 @@
     width: 50ch;
 }
 
-.page-right{
+.page1-right{
     width: 50%;
     display: flex;
     justify-content:flex-end;
     align-items: center;
 }
 
-.page-image{
+.page1-image{
     width: 25vw;
 }
 

@@ -16,7 +16,7 @@
 }
 
 .projects {
-    width: 90%;
+    width: 72vw;
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -43,20 +43,20 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 8vw;
+    gap: 3vw;
     background-color: transparent;
     text-align: left;
 
 }
 
 .project-item-left {
-    font-size: 1.6vw;
+    font-size: 1.4vw;
     width: 60%;
 }
 
 .project-item-right {
     justify-content: space-between;
-    font-size: 1.1vw;
+    font-size: 1vw;
     width: 40%;
 }
 
@@ -78,8 +78,8 @@ a {
 .project-button{
     color: black;
     box-sizing: border-box;
-    font-size: 1.3vw;
-    padding: 1.5vw 4vw ;
+    font-size: 1.2vw;
+    padding: 1.2vw 3.5vw ;
     border-radius: 0.8vw;
     background-color: #25f2d0;
     box-shadow: 0 0 10px rgba(37, 242, 208, 0.75);

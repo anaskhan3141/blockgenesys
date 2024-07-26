@@ -4,17 +4,17 @@ import blackImage from '../../assets/0-black.svg'
 import AnimatedText from '../AnimateText/AnimateText'
 import { useTheme } from '../ThemeProvider'
 
-import "./Pages.css"
+import "./Page.css"
 
-const Page0 = () => {
+const Page = () => {
 
     const { theme, toggleTheme } = useTheme()
     return (
-        <section className='page-section'>
+        <section className='page1-section'>
             <AnimatedText>
 
-                <div className='page-container'>
-                    <div className='page-left '>
+                <div className='page1-container'>
+                    <div className='page1-left '>
 
                         <h1>
                             Smart Contract ​Auditing
@@ -27,9 +27,9 @@ const Page0 = () => {
                             Through a combination of automated analysis and ​manual review, we ensure that your smart contracts ​adhere to best practices, mitigate the risk of ​exploitation, and safeguard your assets and ​transactions.
                         </p>
                     </div>
-                    <div className='page-right'>
+                    <div className='page1-right'>
 
-                        <img src={theme == "dark" ? whiteImage : blackImage} alt="" className='page-image' />
+                        <img src={theme == "dark" ? whiteImage : blackImage} alt="" className='page1-image' />
                     </div>
                 </div>
             </AnimatedText>
@@ -40,4 +40,4 @@ const Page0 = () => {
     )
 }
 
-export default Page0;
+export default Page;
