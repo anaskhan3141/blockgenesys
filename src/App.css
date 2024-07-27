@@ -15,21 +15,20 @@
 
 }
 
-
+/* src/fonts.css */
 @font-face {
-    font-family: "NeueMachina-Light";
-    src: url("./assets/fonts/NeueMachina-Light.otf") format("otf");
+    font-family: 'Inter';
+    src: url('.\Fonts\Inter\Inter-VariableFont_slnt,wght.ttf') 
+}
+@font-face {
+    font-family: 'OpenSans';
+    src: url('.\Fonts\Open_Sans\OpenSans-VariableFont_wdth,wght.ttf') 
+}
+@font-face {
+    font-family: 'Nue';
+    src: url('.\Fonts\Neue Machina - Free for Personal Use\NeueMachina-Regular.otf') 
 }
 
-@font-face {
-    font-family: "NeueMachina-Regular";
-    src: url("./assets/fonts/NeueMachina-Regular.otf") format("otf");
-}
-
-@font-face {
-    font-family: "NeueMachina-Ultrabold";
-    src: url("./assets/fonts/NeueMachina-Ultrabold.otf") format("otf");
-}
 
 * {
     box-sizing: border-box;

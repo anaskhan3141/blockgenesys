@@ -1,4 +1,5 @@
 import React from 'react'
+import {useNavigate} from 'react-router-dom'
 import { useTheme } from '../ThemeProvider'
 import { Link, animateScroll as scroll } from 'react-scroll';
 import twitterImageLight from '../../assets/twitterLight.svg'
@@ -12,6 +13,8 @@ import './Footer.css'
 export default function Footer() {
 
     const { theme, toggletheme } = useTheme();
+    const navigate = useNavigate()
+
     return (
         <footer className='footer' style={{ borderColor: theme == "light" ? "#2b2b2b" : "#e5e7eb" }}>
             <div className="top-container" style={{ borderColor: theme == "light" ? "#2b2b2b" : "#e5e7eb" }}>
@@ -29,11 +32,11 @@ export default function Footer() {
                 </ul>
                 <div id='right-para'>
                     <p>For additional information please reach out to us at sales@blockgensys.com or contact us below:</p>
-                    <span>Contact Us </span>
+                    <span onClick={()=>{window.location.href = '/contact'}}>Contact Us </span>
                 </div>
             </div>
             <div className="bottom-container">
-                <p>© 2024 Blockgensys</p>
+                © 2024 Blockgensys
 
 
                 <div className="social-icons">

@@ -48,7 +48,7 @@ export default function Navbar() {
         <div className="nav-container">
           <div className="navbar-left">
             <img src={Logo} alt="" id="nav-logo" />
-            <h1 className='logo-name' onClick={()=>{navigate('/')}}>BLOCK <br /> GENESYS</h1>
+            <h1 className='logo-name' onClick={()=>{window.location.href = '/'}}>BLOCK <br /> GENESYS</h1>
           </div>
 
           <div className="navbar-right">
@@ -60,14 +60,14 @@ export default function Navbar() {
               </Link>
 
               <Link to="portfolio" smooth={true} duration={1700} offset={-62} activeClass="active" className='Link'>
-                <li className='active'>Portfolio</li>
+                <li >Portfolio</li>
               </Link>
 
             </ul>
 
             <input type="checkbox" id="dark-mode-button" onClick={toggleTheme} checked={theme === 'light' ? true : false} />
 
-            <div className='theme-button' onClick={()=>{navigate('/contact')}}>
+            <div className='theme-button' onClick={()=>{window.location.href = '/contact'}}>
               Contact
             </div>
           </div>
@@ -109,7 +109,7 @@ export default function Navbar() {
 
             <input type="checkbox" id="dark-mode-button" onClick={toggleTheme} checked={theme === 'light' ? true : false} />
 
-            <div className='menu-contact-button' onClick={()=>{navigate('/contact')}}>
+            <div className='menu-contact-button' onClick={()=>{window.location.href = '/contact'}}>
               Contact
             </div>
 

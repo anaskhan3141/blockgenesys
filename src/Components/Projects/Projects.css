@@ -9,7 +9,8 @@
 }
 
 .projects-main h1 {
-    font-size: 5vw;
+    font-size: 4vw;
+    font-family: Nue;
     line-height: 4.5vw;
     font-weight: 300;
     margin: 5vw 0;
@@ -50,13 +51,13 @@ a {
 }
 
 .project-item-left {
-    font-size: 1.4vw;
+    font-family: Nue;
     width: 60%;
 }
 
 .project-item-right {
+    font-family: Nue;
     justify-content: space-between;
-    font-size: 1vw;
     width: 40%;
 }
 
@@ -83,6 +84,7 @@ a {
 .project-button{
     color: black;
     box-sizing: border-box;
+    font-family: OpenSans;
     font-size: 1.2vw;
     padding: 1.2vw 3.5vw ;
     border-radius: 0.8vw;
@@ -92,11 +94,15 @@ a {
 }
 
 .project-name{
+    font-size: 1.4vw;
+    font-family: OpenSans;
     background-color: transparent;
     font-weight: 300;
 
 }
 .project-date{
+    font-size: 1vw;
+    font-family: OpenSans;
     background-color: transparent;
     font-weight: 100;
 }
@@ -114,6 +120,7 @@ a {
 
 .view-all-button{
     display: flex;
+    font-family: OpenSans;
     flex-direction: row;
     align-items: center;
     justify-content: center;

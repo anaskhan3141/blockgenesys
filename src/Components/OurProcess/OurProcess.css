@@ -9,12 +9,14 @@
 }
 
 #our-process-section h1{
-    font-size: 5vw;
-    font-weight: 300;
+    font-family: Nue;
+    font-size: 4vw;
+    font-weight: 400;
 }
 
 #our-process-section p{
-    font-size: 1.5vw;
+    font-family: OpenSans;
+    font-size: 1.2vw;
     font-weight: 300;
     text-align: center;
     width: 72vw;

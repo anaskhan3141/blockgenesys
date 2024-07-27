@@ -1,3 +1,17 @@
+:root {
+
+  --border-color: #333;
+  --input-bg-color : #333;
+  --service-info-bg-color:#444
+
+}
+[data-theme="light"] {
+  --border-color: #ccc;
+  --input-bg-color : #ccc;
+  --service-info-bg-color:#ccc
+
+}
+
 /* ============ Global Styles ============ */
 .contact-section {
   display: flex;
@@ -18,18 +32,21 @@
 }
 
 #contact-heading {
-  font-size: 2.1vw;
+  font-family: Nue;
+  font-size: 2vw;
   font-weight: 400;
 }
 
 .contact-form-subheading {
+  font-family: Nue;
   color: #03ceac;
-  font-size: 1.8vw;
+  font-size: 1.4vw;
   margin-bottom: 0.8vw;
   font-weight: 200;
 }
 
 .contact-form-heading-para {
+  font-family: OpenSans;
   font-size: 1vw;
   margin-bottom: 4vw;
 }
@@ -52,10 +69,12 @@
 }
 
 label {
+  font-family: OpenSans;
+  font-size: 1.1vw;
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
-  font-size: 1.4vw;
+  font-size: 1vw;
 }
 
 .type-checkbox {
@@ -74,7 +93,7 @@ label {
   color: #03ceac;
   width: 100%;
   padding: 1vw;
-  background-color: #37373b;
+  background-color: var(--service-info-bg-color);
   border-radius: 0.7vw;
 }
 
@@ -110,9 +129,10 @@ input[type="email"],
 textarea {
   font-size: 1.2vw;
   padding: 1.2vw;
-  border: 2px solid #ccc;
+  border: 2px solid;
+  border-color: var(--border-color);
   border-radius: 0.5vw;
-  background-color: #333;
+  background-color: var(--input-bg-color);
   color: white;
 }
 
@@ -147,6 +167,7 @@ textarea:focus {
 }
 
 .error-message {
+  font-family: OpenSans;
   color: red;
   font-size: 1.1vw;
   margin: 1vw 0;
@@ -159,6 +180,7 @@ button {
   border-radius: 5px;
   color: white;
   cursor: pointer;
+  
 }
 
 button:hover {
@@ -182,6 +204,7 @@ button:hover {
 }
 
 .submit-button {
+  font-family: OpenSans;
   font-size: 1.1vw;
   color: black;
   box-sizing: border-box;
@@ -193,6 +216,7 @@ button:hover {
 }
 
 
+
 @media screen and (max-width:1024px) {
 
   input[type="text"],
@@ -202,6 +226,6 @@ button:hover {
   }
 
   .contact-section {
-      padding: 20vw 0;
+      padding: 25vw 0;
   }
 }

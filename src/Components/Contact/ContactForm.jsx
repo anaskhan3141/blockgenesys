@@ -6,12 +6,7 @@ import './ContactForm.css'
 export default function ContactForm() {
 
     const { theme, toggleTheme } = useTheme()
-
-
     const [hoveredItem, setHoveredItem] = useState("default");
-    const handleMouseEnter = (item) => {
-        setHoveredItem(item);
-    };
 
     const [formData, setFormData] = useState({
         contactName: '',
@@ -34,8 +29,12 @@ export default function ContactForm() {
         Competitions: false,
         IncidentResponse: false,
         SmartContractSecurityReview: false,
-        Web2SecurityReview: true,
+        Web2SecurityReview: false,
     });
+
+    const handleMouseEnter = (item) => {
+        setHoveredItem(item);
+    };
 
     const handleCheckboxChange = (event) => {
         const { name, checked } = event.target;
@@ -69,6 +68,11 @@ export default function ContactForm() {
             newErrors.projectDescription = 'Must be at least 5 characters';
             valid = false;
         }
+        const checkedCount = Object.values(checkedItems).filter(value => value).length;
+        if (checkedCount === 0) {
+            newErrors.checkboxes = 'At least one checkbox must be checked';
+            valid = false;
+        }
 
         setErrors(newErrors);
         return valid;
@@ -80,18 +84,30 @@ export default function ContactForm() {
     };
 
     const handleSubmit = (e) => {
-        // e.preventDefault();
+        e.preventDefault();
         if (validate()) {
-            // Submit form data
+            const selectedServices = Object.keys(checkedItems).filter(key => checkedItems[key]);
+
+            //Handle the api or something here
+            console.log('Selected services:', selectedServices);
+            console.log('Form submitted successfully:', formData, checkedItems);
+
+            // Reset form data
             setFormData({
                 contactName: '',
                 email: '',
                 telegram: '',
                 projectName: '',
                 projectDescription: ''
-            })
-            console.log('Form submitted successfully');
-            console.log(formData, checkedItems)
+            });
+
+            setCheckedItems({
+                vCISO: false,
+                Competitions: false,
+                IncidentResponse: false,
+                SmartContractSecurityReview: false,
+                Web2SecurityReview: false,
+            });
         }
     };
 
@@ -105,6 +121,7 @@ export default function ContactForm() {
                 <div className="type-of-service">
                     <h3 className='contact-form-subheading'>Type of service</h3>
                     <p className='contact-form-heading-para'>Below are the core services Spearbit provides it's clients. Please select the service(s) that you'd like to request a quote for.</p>
+
                     <div className="checkbox-list">
                         <div className="column">
                             <label onMouseEnter={() => handleMouseEnter('vCISO')}>
@@ -161,7 +178,8 @@ export default function ContactForm() {
                             </label>
                         </div>
                     </div>
-                    <div className="service-info" style={{backgroundColor: theme === 'light' ? "#ccc" : "#37373b" }}>
+                    {errors.checkboxes && <p className="error-message">{errors.checkboxes}</p>}
+                    <div className="service-info" >
 
                         {
                             serviceInfos[hoveredItem]
@@ -184,7 +202,6 @@ export default function ContactForm() {
                                 onChange={handleChange}
                                 className={errors.contactName ? 'error' : ''}
                                 placeholder="Contact Name"
-                                style={{backgroundColor: theme === 'light' ? "#ccc" : "#37373b" }}
                             />
                             {errors.contactName && <p className="error-message">{errors.contactName}</p>}
                         </div>
@@ -197,7 +214,6 @@ export default function ContactForm() {
                                 onChange={handleChange}
                                 className={errors.email ? 'error' : ''}
                                 placeholder="Email"
-                                style={{backgroundColor: theme === 'light' ? "#ccc" : "#37373b" }}
                             />
                             {errors.email && <p className="error-message">{errors.email}</p>}
                         </div>
@@ -210,7 +226,6 @@ export default function ContactForm() {
                                 onChange={handleChange}
                                 className={errors.telegram ? 'error' : ''}
                                 placeholder="Telegram"
-                                style={{backgroundColor: theme === 'light' ? "#ccc" : "#37373b" }}
                             />
                             {errors.telegram && <p className="error-message">{errors.telegram}</p>}
                         </div>
@@ -221,7 +236,7 @@ export default function ContactForm() {
                 <div className="project-info">
                     <h3 className='contact-form-subheading'>Project Information</h3>
                     <p className='contact-form-heading-para'>Please enter your project's name and a brief description of your project below as well as any additional information you'd like to include.</p>
-                    <form className="project-form"  >
+                    <form className="project-form" onSubmit={handleSubmit} >
                         <div className="project-form-group">
                             <label>Project Name</label>
                             <input
@@ -231,7 +246,6 @@ export default function ContactForm() {
                                 onChange={handleChange}
                                 className={errors.projectName ? 'error' : ''}
                                 placeholder="A general description of your project"
-                                style={{backgroundColor: theme === 'light' ? "#ccc" : "#37373b" }}
                             />
                             {errors.contactName && <p className="error-message">{errors.projectName}</p>}
                         </div>
@@ -244,7 +258,6 @@ export default function ContactForm() {
                                 onChange={handleChange}
                                 className={errors.projectDescription ? 'error' : ''}
                                 placeholder="Project Description"
-                                style={{backgroundColor: theme === 'light' ? "#ccc" : "#37373b"}}
                             />
                             {errors.email && <p className="error-message">{errors.projectDescription}</p>}
                         </div>
@@ -263,6 +276,7 @@ export default function ContactForm() {
 
                 </div>
             </div>
+
 
 
         </section>
