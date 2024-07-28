@@ -7,6 +7,7 @@ export default function ContactForm() {
 
     const { theme, toggleTheme } = useTheme()
     const [hoveredItem, setHoveredItem] = useState("default");
+    const [isSubmitted, setIsSubmitted] = useState(false)
 
     const [formData, setFormData] = useState({
         contactName: '',
@@ -87,6 +88,10 @@ export default function ContactForm() {
         e.preventDefault();
         if (validate()) {
             const selectedServices = Object.keys(checkedItems).filter(key => checkedItems[key]);
+            setIsSubmitted(true)
+            setTimeout(() => {
+                setIsSubmitted(false)
+            }, 3000);
 
             //Handle the api or something here
             console.log('Selected services:', selectedServices);
@@ -202,6 +207,8 @@ export default function ContactForm() {
                                 onChange={handleChange}
                                 className={errors.contactName ? 'error' : ''}
                                 placeholder="Contact Name"
+                                autoComplete='off'
+
                             />
                             {errors.contactName && <p className="error-message">{errors.contactName}</p>}
                         </div>
@@ -214,6 +221,7 @@ export default function ContactForm() {
                                 onChange={handleChange}
                                 className={errors.email ? 'error' : ''}
                                 placeholder="Email"
+                                autoComplete='off'
                             />
                             {errors.email && <p className="error-message">{errors.email}</p>}
                         </div>
@@ -226,6 +234,7 @@ export default function ContactForm() {
                                 onChange={handleChange}
                                 className={errors.telegram ? 'error' : ''}
                                 placeholder="Telegram"
+                                autoComplete='off'
                             />
                             {errors.telegram && <p className="error-message">{errors.telegram}</p>}
                         </div>
@@ -269,7 +278,11 @@ export default function ContactForm() {
 
                 </div>
 
-                <div className="submit">
+                <div className="submit" style={{justifyContent: isSubmitted? "space-between" : 'flex-end'}}>
+                    {isSubmitted && (
+                        <p id='success-message'>Form Successfully Submitted</p>
+
+                    )}
                     <div className='submit-button' onClick={handleSubmit}>
                         Submit
                     </div>
